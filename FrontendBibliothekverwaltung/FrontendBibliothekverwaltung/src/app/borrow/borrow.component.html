@@ -1,0 +1,16 @@
+<h1>Ausgeliehene Bücher</h1>
+<hr>
+<br>
+<div >
+  <div *ngFor="let borrow of borrows" class="flexi">
+    <div *ngIf="borrow.book.borrowed" >
+      <div class="boxflex" class="book">
+        <p>{{borrow.book.title}}</p>
+        <img src="{{borrow.book.imgPath}}">
+        <p>Ausgeborgt: {{borrow.borrowDate}}</p>
+        <p>Rückgabe: {{borrow.returnDate}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,48 @@
+<!--<form [formGroup]="borrowForm" (ngSubmit)="onSubmit()">
+  <label for="startDate">Start Date:</label>
+  <input id="startDate" formControlName="startDate" type="date">
+  <label for="endDate">End Date:</label>
+  <input id="endDate" formControlName="endDate" type="date">
+  <button type="submit">Get Most Borrowed Books</button>
+</form>
+
+<div>
+  <h3>Most Borrowed Books:</h3>
+  <ul>
+    <li *ngFor="let book of mostBorrowedBooks">
+      <img src="{{book.boki.imgPath}}">
+      <p>Author: {{ book.boki.author.vorname}} {{ book.boki.author.nachname}}</p>
+      <p>Borrow Count: {{ book.count }}</p>
+    </li>
+  </ul>
+</div>
+-->
+<h2>Search for the top 3 most popular books</h2>
+<form [formGroup]="borrowForm" (ngSubmit)="onSubmit()" class="search-form">
+  <label for="startDate">Start Date:</label>
+  <input id="startDate" formControlName="startDate" type="date">
+  <label for="endDate">End Date:</label>
+  <input id="endDate" formControlName="endDate" type="date">
+  <button type="submit">Get Most Borrowed Books</button>
+</form>
+
+<div class="podium" *ngIf="mostBorrowedBooks.length > 0">
+  <div class="podium-item second" *ngIf="mostBorrowedBooks[1]">
+    <img [src]="mostBorrowedBooks[1].boki.imgPath" alt="{{ mostBorrowedBooks[1].boki.title }}">
+    <p class="book-title">{{ mostBorrowedBooks[1].boki.title }}</p>
+    <p class="book-author">Author: {{ mostBorrowedBooks[1].boki.author.vorname }} {{ mostBorrowedBooks[1].boki.author.nachname }}</p>
+    <p class="book-count">Borrow Count: {{ mostBorrowedBooks[1].count }}</p>
+  </div>
+  <div class="podium-item first" *ngIf="mostBorrowedBooks[0]">
+    <img [src]="mostBorrowedBooks[0].boki.imgPath" alt="{{ mostBorrowedBooks[0].boki.title }}">
+    <p class="book-title">{{ mostBorrowedBooks[0].boki.title }}</p>
+    <p class="book-author">Author: {{ mostBorrowedBooks[0].boki.author.vorname }} {{ mostBorrowedBooks[0].boki.author.nachname }}</p>
+    <p class="book-count">Borrow Count: {{ mostBorrowedBooks[0].count }}</p>
+  </div>
+  <div class="podium-item third" *ngIf="mostBorrowedBooks[2]">
+    <img [src]="mostBorrowedBooks[2].boki.imgPath" alt="{{ mostBorrowedBooks[2].boki.title }}">
+    <p class="book-title">{{ mostBorrowedBooks[2].boki.title }}</p>
+    <p class="book-author">Author: {{ mostBorrowedBooks[2].boki.author.vorname }} {{ mostBorrowedBooks[2].boki.author.nachname }}</p>
+    <p class="book-count">Borrow Count: {{ mostBorrowedBooks[2].count }}</p>
+  </div>
+</div>

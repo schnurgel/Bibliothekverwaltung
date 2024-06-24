@@ -1,0 +1,50 @@
+<!--<h1>bookdetails</h1>
+<p>Autor: {{book?.author?.vorname}} {{book?.author?.nachname}}</p>
+<p>{{book?.description}}</p>
+<div>
+  <p>Kategorie: {{book?.category?.name}}</p>
+  <p>{{book?.category?.beschreibung}}</p>
+</div>-->
+
+
+<!--DETAILS-->
+<div class="book-details-container" *ngIf="book">
+  <h1 id="bookititle">{{ book.title }}</h1>
+  <div class="flexi">
+    <img src="{{book.imgPath}}">
+    <div class="texts">
+      <p><strong>Author:</strong> {{ book.author?.vorname }} {{ book.author?.nachname }}</p>
+      <p><strong>Category:</strong> {{ book.category?.name }}</p>
+      <p><strong>Status:</strong> {{ book.borrowed ? 'Borrowed' : 'Available' }}</p>
+    </div>
+  </div>
+
+
+  <!--RATING--->
+  <div class="star-rating">
+    <div *ngFor="let star of [1, 2, 3, 4, 5]">
+      <span (click)="setRating(star)" [ngClass]="{'selected': star <= rating}">&#9733;</span>
+    </div>
+  </div>
+  <button (click)="submitReview()">Submit Review</button>
+
+  <h2>THIS IS AVERAGE RATING: {{averageRating | number:'1.2-2'}} ({{reviewCount}})</h2>
+  <!--FILTER-->
+  <div *ngIf="!isBorrowed()" class="borrow-form">
+    <h3>Borrow this book</h3>
+    <form [formGroup]="form">
+      <label for="borrowDate">Borrow Date:</label>
+      <input id="borrowDate" formControlName="borrowDate" name="borrowDate" type="date" required>
+
+      <label for="returnDate">Return Date:</label>
+      <input id="returnDate"  formControlName="returnDate" name="returnDate" type="date" required>
+
+      <button type="submit" (click)="borrowBook()">Borrow</button>
+    </form>
+  </div>
+
+  <div *ngIf="isBorrowed()">
+    <h3>Return this book</h3>
+    <button class="return-button" (click)="returnBook()">Return</button>
+  </div>
+</div>

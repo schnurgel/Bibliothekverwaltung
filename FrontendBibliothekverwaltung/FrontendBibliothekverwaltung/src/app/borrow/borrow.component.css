@@ -1,0 +1,33 @@
+.book{
+  padding: 2vw;
+  background: #333333;
+  color: white;
+  margin: 1vw;
+  width: 11vw;
+  text-align: center;
+  border-radius: 2vw;
+  margin-right: 3vw;
+  margin-left:3vw;
+}
+.boxflex{
+  font-family: "Arial Hebrew";
+
+}
+.flexi{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  text-align: center;
+  padding-top: 2vw;
+  font-family: Avenir;
+  margin-bottom: 2vw;
+}
+p{
+  font-family: "Arial Hebrew";
+}
+img{
+  height: 10vw;
+}

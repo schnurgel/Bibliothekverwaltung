@@ -1,0 +1,93 @@
+
+/* Allgemeine Einstellungen */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Filterdiv Styles */
+.filterdiv {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filterdiv label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Avenir;
+}
+
+.filterdiv input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filterdiv button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filterdiv button:hover {
+  background-color: #45a049;
+}
+
+/* Bücherregal Styles */
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.book {
+  background-color: #424242;
+  padding: 15px;
+  margin: 15px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Avenir;
+}
+.book:hover {
+  background-color: #2d2d2d;
+}
+
+.book h3 {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+h1{
+  text-align: center;
+  padding-top: 2vw;
+  font-family: "PT Mono";
+  margin-bottom: 2vw;
+}
+hr{
+  margin-bottom: 3vw;
+}
+body{
+  font-family: "PT Mono";
+}
+

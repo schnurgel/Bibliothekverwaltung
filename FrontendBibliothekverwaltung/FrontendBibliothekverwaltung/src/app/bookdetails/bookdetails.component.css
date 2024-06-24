@@ -1,0 +1,131 @@
+.book-details-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-top: 5vw;
+  font-family: Avenir;
+}
+
+.book-details-container h1 {
+  text-align: center;
+  color: #333;
+}
+#bookititle{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.book-details-container p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.borrow-form {
+  margin-top: 20px;
+}
+
+.borrow-form h3 {
+  color: #444;
+}
+
+.borrow-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.borrow-form input[type="date"],
+.borrow-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.borrow-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.borrow-form button:hover {
+  background-color: #45a049;
+}
+
+.return-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.return-button:hover {
+  background-color: #e53935;
+}
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star-rating span {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star-rating span.selected {
+  color: gold;
+}
+
+.star-rating span:hover {
+  color: gold;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #303030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a3a3a3;
+}
+
+body{
+  font-family: "PT Mono";
+}
+.flexi{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+}
+img{
+  margin-left: 2vw;
+}
+.texts{
+  margin-top: 10vw;
+  margin-left: 5vw;
+}

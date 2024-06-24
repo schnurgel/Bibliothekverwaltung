@@ -1,0 +1,14 @@
+<!--FILTER---->
+<div class="filterdiv">
+  <label for="author">Buch suchen:</label>
+  <input id="author"  [(ngModel)]="filter"  placeholder="Buchname eingeben" (input)="onFilterChange()">
+</div>
+<h1>BücherÜbersicht</h1>
+<hr>
+<!--ausgabe-->
+<div class="bookshelf">
+  <div *ngFor="let book of filteredBooks" [routerLink]="'/book-overview/' + book.buchId" class="book">
+    <h3 >{{ book.title }}</h3>
+    <img src="{{book.imgPath}}">
+  </div>
+</div>
